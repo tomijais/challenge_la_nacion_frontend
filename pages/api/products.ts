@@ -6,7 +6,6 @@ export default async function GET(req: NextApiRequest, res: NextApiResponse) {
     
     try {
       const response = await axios.get(API_BASE_URL);
-      console.log(response);
       
       const productos = response.data;
       res.status(200).json(productos);
